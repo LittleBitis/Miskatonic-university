@@ -1,13 +1,13 @@
-# Miskatonic-university
+# Miskatonic-universit
 #include <iostream>
-#include <fstream>
+#include <string>
+#include <algorithm>
 
-using namespace std;
+int main() {
 
-int main(){
-     ofstream FILE;
-     FILE.open("text.txt");
-     FILE << ".Э.Д.В.А.Р.Д. .Н.И.Г.М.А.";
-     FILE.close();
-    return 0 ;
+std::string s = "E.D.W.A.R.D N.I.G.M.A!";
+auto it = std::remove(s.begin(), s.end(), '.');
+s.erase(it, s.end());
+std::cout << s << std::endl;
+return 0;
 }
